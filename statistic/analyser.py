@@ -5,6 +5,7 @@ Created on 13 april 2013
 @author: vl
 '''
 
+
 class Analyser(object):
     '''
     classdocs
@@ -95,6 +96,9 @@ class Analyser(object):
         visits_count = 0
         for record in self.__data:
             pass
+            if record[1] == home_page:
+                visits_count += 1
+
         # TODO: Обчислити кількість відвідувань головної сторінки
         
         return visits_count
