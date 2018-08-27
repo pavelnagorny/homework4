@@ -22,7 +22,7 @@ class Analyser(object):
         '''
         Load data from log file
         '''
-        log_file = open(self.__filepath,'r')
+        log_file = open(self.__filepath, 'r')
         data = log_file.readlines()
         log_file.close()
         for line in data:
@@ -84,7 +84,7 @@ class Analyser(object):
         resources = {}
         for record in self.__data:
             if resources.has_key(record[2]):
-                resources[record[2]]+=1
+                resources[record[2]] += 1
             else:
                 resources[record[2]] = 1
         return resources
@@ -95,7 +95,6 @@ class Analyser(object):
         '''
         visits_count = 0
         for record in self.__data:
-            pass
             if record[1].rstrip('/') == home_page.rstrip('/'):
                 visits_count += 1
         
