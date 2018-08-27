@@ -96,9 +96,8 @@ class Analyser(object):
         visits_count = 0
         for record in self.__data:
             pass
-            if record[1] == home_page:
+            home_char = record[1].find('/', 7,)
+            if record[1] == home_page or home_char == -1:
                 visits_count += 1
-
-        # TODO: Обчислити кількість відвідувань головної сторінки
         
         return visits_count
