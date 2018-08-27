@@ -96,8 +96,7 @@ class Analyser(object):
         visits_count = 0
         for record in self.__data:
             pass
-            home_char = record[1].find('/', 7,)
-            if record[1] == home_page or home_char == -1:
+            if record[1].rstrip('/') == home_page.rstrip('/'):
                 visits_count += 1
         
         return visits_count
